@@ -1,24 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [file, setFile] = useState("");
+  const [employees, setEmployees] = useState();
+
+  const ReadFile = (e) => {
+    const inputFile = e.target.files[0];
+    const fr = new FileReader();
+
+    fr.onload = (e) => {
+      setFile(e.target.result);
+    };
+
+    fr.readAsText(inputFile);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <input type="file" onChange={(e) => ReadFile(e)} />
+      <button
+        onClick={() =>
+          setEmployees(file.split("\r\n").map((el) => el.split(",")))
+        }
+      >
+        Load Data Into The Table
+      </button>
+      <button>
+        Get Employee pair with highest collaboration time on same project
+      </button>
+      {employees
+        ? employees.map((empl) => (
+            <EmployeeRow key={empl[0]} data={empl}></EmployeeRow>
+          ))
+        : ""}
     </div>
+  );
+}
+
+function EmployeeRow({ data }) {
+  console.log(data);
+  return (
+    <span className="datarow">
+      <p>{data[0]}</p>
+      <p>{data[1]}</p>
+      <p>{data[2]}</p>
+      <p>{data[3]}</p>
+    </span>
   );
 }
 
