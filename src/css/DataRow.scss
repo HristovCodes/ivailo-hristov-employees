@@ -1,0 +1,16 @@
+.DataRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  p {
+    margin: 0;
+    padding: 8px 0;
+    border: 1px solid #ccc;
+
+    font-size: 1em;
+    text-align: center;
+
+    width: 25%;
+  }
+}
