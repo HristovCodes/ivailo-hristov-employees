@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import Employee from "./Components/Employee";
+import "./css/index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Employee />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
