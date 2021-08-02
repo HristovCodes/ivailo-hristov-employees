@@ -12,11 +12,11 @@ You will also see any lint errors in the console.
 
 ## How to use
 After you run the project you will see this page.
-![image](https://user-images.githubusercontent.com/41078003/126895899-f3d23a42-bf2b-4867-b148-8dba17648d64.png)
+![image](https://user-images.githubusercontent.com/41078003/127861802-d1fcd6f9-c3ca-4ef8-9413-375f12ea3e8c.png)
 
 Here you want to click on the "Upload employees file" button which will let you choose the file you want to use. Afterwards click on "Get Employee Pair" and you will get your results in the table below the buttons.
 It should look something like this when you are done.
-![image](https://user-images.githubusercontent.com/41078003/126895946-a57b6dbd-8438-44ae-9c50-21b8bf38d4a8.png)
+![image](https://user-images.githubusercontent.com/41078003/127861774-bd6b084d-8f8a-4c7f-853b-742a9f8e4e39.png)
 
 ## Additional info
 - The app supports both files in .txt and in .csv
