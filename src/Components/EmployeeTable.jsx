@@ -7,7 +7,9 @@ function EmployeeTable({ pair }) {
       <DataRow
         data={["Employee ID #1", "Employee ID #2", "Project ID", "Days Worked"]}
       ></DataRow>
-      <DataRow data={pair}></DataRow>
+      {pair.team?.map((p) => (
+        <DataRow key={pair.team.indexOf(p)} data={p}></DataRow>
+      ))}
     </div>
   );
 }

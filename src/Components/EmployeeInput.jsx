@@ -21,7 +21,7 @@ function EmployeeInput({ setPair }) {
   };
   return (
     <form onSubmit={(e) => e.preventDefault()} className="EmployeeInput">
-      <label for="file-upload">Upload employees file</label>
+      <label htmlFor="file-upload">Upload employees file</label>
       <span>{fileName}</span>
       <input
         type="file"
